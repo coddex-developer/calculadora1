@@ -1,5 +1,5 @@
-const A = document.getElementById("nmA").value;
-const B = document.getElementById("nmB").value;
+const inputA = document.getElementById("nmA").value;
+const inputB = document.getElementById("nmB").value;
 const sum = document.getElementById("sum");
 const error = document.getElementById("error");
 const versionInfo = document.querySelector(".versionInfo");
@@ -63,8 +63,7 @@ document.getElementById("btnCopy").addEventListener("click", () => {
 //Evento para realizar operações
 sum.addEventListener("click", ev => {
   ev.preventDefault();
-  +A
-  +B
+  
   if (A.value == "") {
     A.style = "border: 2px solid red";
     A.focus();
