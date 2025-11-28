@@ -11,4 +11,16 @@ const subtracao = document.getElementById("subtracao");
 const multiplicacao = document.getElementById("multiplicacao");
 const divisao = document.getElementById("divisao");
 
+const objCalc = {
+  sum: inputA + inputB,
+  subtract: inputA - inputB,
+  division: inputA / inputB
+};
+const {sum} = objCalc;
+const {subtract} = objCalc;
+const {division} = objCalc;
 
+showSum.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  alert("")
+})
