@@ -89,7 +89,7 @@ sum.addEventListener("click", ev => {
 
   if (!isNaN(A) && !isNaN(B)) {
     
-    soma.textContent = sort(A + B);
+    soma.textContent = eval(A + B);
     subtracao.textContent = A - B;
     multiplicacao.textContent = A * B;
     divisao.textContent = A / B;
