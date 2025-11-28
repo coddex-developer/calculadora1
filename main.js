@@ -1,4 +1,4 @@
-const A = document.getElementById("nmA");
+const A = document.getElementById("nmA").value;
 const B = document.getElementById("nmB");
 const sum = document.getElementById("sum");
 const error = document.getElementById("error");
