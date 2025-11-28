@@ -64,8 +64,8 @@ document.getElementById("btnCopy").addEventListener("click", () => {
 //Evento para realizar operações
 sum.addEventListener("click", ev => {
   ev.preventDefault();
-  parseFloat(A.value);
-  parseFloat(B.value);
+  A.value;
+  B.value;
   
   if (A.value === "") {
     A.style = "border: 2px solid red";
