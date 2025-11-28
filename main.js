@@ -1,5 +1,5 @@
-const A = document.getElementById("nmA").value();
-const B = document.getElementById("nmB").value();
+const A = document.getElementById("nmA").value;
+const B = document.getElementById("nmB").value;
 const sum = document.getElementById("sum");
 const error = document.getElementById("error");
 const versionInfo = document.querySelector(".versionInfo");
