@@ -40,17 +40,17 @@ function ClearFields() {
 }
 
 //Função de copiar resultados
-function CopyList(numA, numB) {
+function CopyList(A, B) {
   document.getElementById("btnCopy").addEventListener("click", () => {
     const listCopy = `
 📄 *Resultado dos cálculos de ${numA} e ${numB}:* 
 
 =×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=
       
-*Soma:* ${numA + numB}
-*Subtração:* ${numA - numB}
-*Multiplicação:* ${numA * numB}
-*Divisão:* ${numA / numB}
+*Soma:* ${A + B}
+*Subtração:* ${A - B}
+*Multiplicação:* ${A * B}
+*Divisão:* ${A / B}
 
 =×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=
 
@@ -95,7 +95,7 @@ sum.addEventListener("click", ev => {
     multiplicacao.textContent = A * B;
     divisao.textContent = A / B;
     options.classList.add("func");
-    return CopyList(A, B);
+    
   } else {
     error.classList.add("alert");
     closeError.addEventListener("click", () => {
@@ -108,3 +108,4 @@ sum.addEventListener("click", ev => {
   }
 });
 ClearFields();
+CopyList(A, B);
