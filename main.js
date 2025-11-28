@@ -63,7 +63,8 @@ document.getElementById("btnCopy").addEventListener("click", () => {
 //Evento para realizar operações
 sum.addEventListener("click", ev => {
   ev.preventDefault();
-
+  +A
+  +B
   if (A.value == "") {
     A.style = "border: 2px solid red";
     A.focus();
