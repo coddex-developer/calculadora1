@@ -76,24 +76,12 @@ sum.addEventListener("click", ev => {
     A.style = "border: 0";
   }
 
-  if (!isNaN(A) && !isNaN(B)) {
-
     soma.textContent = A + B;
     subtracao.textContent = A - B;
     multiplicacao.textContent = A * B;
     divisao.textContent = A / B;
     options.classList.add("func");
 
-  } else {
-    error.classList.add("alert");
-    closeError.addEventListener("click", () => {
-      error.classList.remove("alert");
-    });
-
-    setInterval(() => {
-      error.classList.remove("alert");
-    }, 1000 * 8);
-  }
 });
 
 ClearFields();
