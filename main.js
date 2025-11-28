@@ -11,7 +11,8 @@ const soma = document.getElementById("soma");
 const subtracao = document.getElementById("subtracao");
 const multiplicacao = document.getElementById("multiplicacao");
 const divisao = document.getElementById("divisao");
-
+let A = parseFloat(nmA.value);
+let B = parseFloat(nmB.value);
 
 //Funcão de mostrar Atualizacoes no modal
 versionInfo.addEventListener('click', () => {
@@ -74,9 +75,6 @@ function CopyList(numA, numB) {
 sum.addEventListener("click", ev => {
   ev.preventDefault();
 
-  let A = parseFloat(nmA.value);
-  let B = parseFloat(nmB.value);
-
   if (nmA.value === "") {
     nmA.style = "border: 2px solid red";
     nmA.focus();
@@ -90,17 +88,12 @@ sum.addEventListener("click", ev => {
   }
 
   if (!isNaN(A) && !isNaN(B)) {
-    const C = parseInt(A);
-    const D = parseInt(B);
 
-    soma.textContent = C + D;
-    subtracao.textContent = C - D;
-    multiplicacao.textContent = C * D;
-    divisao.textContent = C / D;
+    soma.textContent = A + B;
+    subtracao.textContent = A - B;
+    multiplicacao.textContent = A * B;
+    divisao.textContent = A / B;
     options.classList.add("func");
-
-    CopyList(C, D);
-    ClearFields();
   } else {
     error.classList.add("alert");
     closeError.addEventListener("click", () => {
@@ -111,5 +104,7 @@ sum.addEventListener("click", ev => {
       error.classList.remove("alert");
     }, 1000 * 8);
   }
-  return
 });
+
+CopyList(A, B);
+ClearFields();
