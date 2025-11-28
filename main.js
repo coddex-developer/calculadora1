@@ -12,8 +12,6 @@ const subtracao = document.getElementById("subtracao");
 const multiplicacao = document.getElementById("multiplicacao");
 const divisao = document.getElementById("divisao");
 
-let A = parseFloat(nmA.value);
-let B = parseFloat(nmB.value);
 
 //Funcão de mostrar Atualizacoes no modal
 versionInfo.addEventListener('click', () => {
@@ -76,6 +74,9 @@ function CopyList(numA, numB) {
 sum.addEventListener("click", ev => {
   ev.preventDefault();
 
+  let A = parseFloat(nmA.value);
+  let B = parseFloat(nmB.value);
+
   if (nmA.value === "") {
     nmA.style = "border: 2px solid red";
     nmA.focus();
@@ -97,17 +98,18 @@ sum.addEventListener("click", ev => {
     multiplicacao.textContent = C * D;
     divisao.textContent = C / D;
     options.classList.add("func");
+
+    CopyList(C, D);
+    ClearFields();
   } else {
     error.classList.add("alert");
     closeError.addEventListener("click", () => {
       error.classList.remove("alert");
     });
-    
-    CopyList(C, D);
-    ClearFields();
-    
+
     setInterval(() => {
       error.classList.remove("alert");
     }, 1000 * 8);
   }
+  return
 });
