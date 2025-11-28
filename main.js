@@ -63,25 +63,24 @@ document.getElementById("btnCopy").addEventListener("click", () => {
 //Evento para realizar operações
 sum.addEventListener("click", ev => {
   ev.preventDefault();
-  
-  if (A.value === "") {
+
+  if (A === "") {
     A.style = "border: 2px solid red";
     A.focus();
-  } else if (B.value === "") {
+  } else if (B === "") {
     B.style = "border: 2px solid red";
     B.focus();
-  } else if (A.value > 0) {
+  } else if (A > 0) {
     A.style = "border: 0";
-  } else if (B.value > 0) {
+  } else if (B > 0) {
     A.style = "border: 0";
   }
 
-    soma.textContent = A + B;
-    subtracao.textContent = A - B;
-    multiplicacao.textContent = A * B;
-    divisao.textContent = A / B;
-    options.classList.add("func");
-
+  soma.textContent = A + B;
+  subtracao.textContent = A - B;
+  multiplicacao.textContent = A * B;
+  divisao.textContent = A / B;
+  options.classList.add("func");
 });
 
 ClearFields();
