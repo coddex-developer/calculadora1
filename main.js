@@ -95,13 +95,12 @@ sum.addEventListener("click", ev => {
     multiplicacao.textContent = A * B;
     divisao.textContent = A / B;
     options.classList.add("func");
-    return
   } else {
     error.classList.add("alert");
     closeError.addEventListener("click", () => {
       error.classList.remove("alert");
     });
-    CopyList(A, B);
+    
     setInterval(() => {
       error.classList.remove("alert");
     }, 1000 * 8);
