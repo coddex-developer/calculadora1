@@ -1,5 +1,5 @@
-const A = document.getElementById("nmA");
-const B = document.getElementById("nmB");
+const A = document.getElementById("nmA").value();
+const B = document.getElementById("nmB").value();
 const sum = document.getElementById("sum");
 const error = document.getElementById("error");
 const versionInfo = document.querySelector(".versionInfo");
@@ -11,9 +11,6 @@ const soma = document.getElementById("soma");
 const subtracao = document.getElementById("subtracao");
 const multiplicacao = document.getElementById("multiplicacao");
 const divisao = document.getElementById("divisao");
-
-+A
-+B;
 
 //Funcão de mostrar Atualizacoes no modal
 versionInfo.addEventListener('click', () => {
@@ -40,10 +37,9 @@ function ClearFields() {
   });
 }
 
-//Função de copiar resultados
-function CopyList() {
-  document.getElementById("btnCopy").addEventListener("click", () => {
-    const listCopy = `
+//Evento de copiar resultados
+document.getElementById("btnCopy").addEventListener("click", () => {
+  const listCopy = `
 📄 *Resultado dos cálculos de ${numA} e ${numB}:* 
 
 =×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=
@@ -59,49 +55,39 @@ function CopyList() {
 ☆ _Developed by CodeCraft_
 `;
 
-    navigator.clipboard.writeText(listCopy)
-      .then(() => {
-        alert("Copiado com sucesso!");
-      })
-      .catch(err => {
-        console.error(
-          "Erro ao copiar para a área de transferência:",
-          err
-        );
-      });
-  });
-}
+  navigator.clipboard.writeText(listCopy)
+});
 
 //Função de realizar operações
 sum.addEventListener("click", ev => {
   ev.preventDefault();
 
-  if (nmA.value === "") {
-    nmA.style = "border: 2px solid red";
-    nmA.focus();
-  } else if (nmB.value === "") {
-    nmB.style = "border: 2px solid red";
-    nmB.focus();
-  } else if (nmA.value > 0) {
-    nmA.style = "border: 0";
-  } else if (nmB.value > 0) {
-    nmA.style = "border: 0";
+  if (A.value === "") {
+    A.style = "border: 2px solid red";
+    A.focus();
+  } else if (B.value === "") {
+    B.style = "border: 2px solid red";
+    B.focus();
+  } else if (A.value > 0) {
+    A.style = "border: 0";
+  } else if (B.value > 0) {
+    A.style = "border: 0";
   }
 
   if (!isNaN(A) && !isNaN(B)) {
-  
+
     soma.textContent = A + B;
     subtracao.textContent = A - B;
     multiplicacao.textContent = A * B;
     divisao.textContent = A / B;
     options.classList.add("func");
-    
+
   } else {
     error.classList.add("alert");
     closeError.addEventListener("click", () => {
       error.classList.remove("alert");
     });
-    
+
     setInterval(() => {
       error.classList.remove("alert");
     }, 1000 * 8);
@@ -109,4 +95,3 @@ sum.addEventListener("click", ev => {
 });
 
 ClearFields();
-CopyList();
