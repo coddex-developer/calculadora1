@@ -101,12 +101,10 @@ sum.addEventListener("click", ev => {
     closeError.addEventListener("click", () => {
       error.classList.remove("alert");
     });
-
+    CopyList(A, B);
     setInterval(() => {
       error.classList.remove("alert");
     }, 1000 * 8);
   }
 });
-
-CopyList(A, B);
 ClearFields();
