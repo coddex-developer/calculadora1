@@ -20,7 +20,7 @@ const {sum} = objCalc;
 const {subtract} = objCalc;
 const {division} = objCalc;
 
-document.querySelector("form")
+document.querySelector("form").addEventListener("input", ev => ev.preventDefault())
 
 showSum.addEventListener("click", (ev) => {
   ev.preventDefault();
