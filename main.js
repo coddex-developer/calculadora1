@@ -42,7 +42,7 @@ document.getElementById("btnCopy").addEventListener("click", () => {
   parseFloat(A);
   parseFloat(B);
   const listCopy = `
-📄 *Resultado dos cálculos de ${numA} e ${numB}:* 
+📄 *Resultado dos cálculos de ${A} e ${B}:* 
 
 =×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=
       
