@@ -64,10 +64,10 @@ document.getElementById("btnCopy").addEventListener("click", () => {
 sum.addEventListener("click", ev => {
   ev.preventDefault();
 
-  if (A === "") {
+  if (A.value === "") {
     A.style = "border: 2px solid red";
     A.focus();
-  } else if (B === "") {
+  } else if (B.value === "") {
     B.style = "border: 2px solid red";
     B.focus();
   } else if (A > 0) {
