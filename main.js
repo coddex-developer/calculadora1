@@ -39,6 +39,9 @@ function ClearFields() {
 
 //Evento de copiar resultados
 document.getElementById("btnCopy").addEventListener("click", () => {
+  parseFloat(A.value());
+  parseFloat(B.value());
+  
   const listCopy = `
 📄 *Resultado dos cálculos de ${numA} e ${numB}:* 
 
