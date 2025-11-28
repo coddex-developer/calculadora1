@@ -1,6 +1,6 @@
 const inputA = document.getElementById("nmA").value;
 const inputB = document.getElementById("nmB").value;
-const sum = document.getElementById("sum");
+const showSum = document.getElementById("sum");
 const error = document.getElementById("error");
 const versionInfo = document.querySelector(".versionInfo");
 const modalShow = document.getElementById("modalShow");
