@@ -1,5 +1,5 @@
-const A = document.getElementById("nmA");
-const B = document.getElementById("nmB");
+const A = document.getElementById("nmA").value;
+const B = document.getElementById("nmB").value;
 const sum = document.getElementById("sum");
 const error = document.getElementById("error");
 const versionInfo = document.querySelector(".versionInfo");
@@ -39,8 +39,6 @@ function ClearFields() {
 
 //Evento de copiar resultados
 document.getElementById("btnCopy").addEventListener("click", () => {
-  parseFloat(A.value);
-  parseFloat(B.value);
   
   const listCopy = `
 📄 *Resultado dos cálculos de ${numA} e ${numB}:* 
@@ -64,8 +62,6 @@ document.getElementById("btnCopy").addEventListener("click", () => {
 //Evento para realizar operações
 sum.addEventListener("click", ev => {
   ev.preventDefault();
-  A.value;
-  B.value;
   
   if (A.value === "") {
     A.style = "border: 2px solid red";
