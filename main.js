@@ -95,6 +95,7 @@ sum.addEventListener("click", ev => {
     multiplicacao.textContent = A * B;
     divisao.textContent = A / B;
     options.classList.add("func");
+    return CopyList(A, B);
   } else {
     error.classList.add("alert");
     closeError.addEventListener("click", () => {
