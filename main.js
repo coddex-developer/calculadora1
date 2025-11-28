@@ -11,8 +11,8 @@ const soma = document.getElementById("soma");
 const subtracao = document.getElementById("subtracao");
 const multiplicacao = document.getElementById("multiplicacao");
 const divisao = document.getElementById("divisao");
-let A = nmA.value;
-let B = nmB.value;
+let A = +nmA.value;
+let B = +nmB.value;
 
 //Funcão de mostrar Atualizacoes no modal
 versionInfo.addEventListener('click', () => {
@@ -88,8 +88,7 @@ sum.addEventListener("click", ev => {
   }
 
   if (!isNaN(A) && !isNaN(B)) {
-    parseFloat(A);
-    parseFloat(B);
+  
     soma.textContent = A + B;
     subtracao.textContent = A - B;
     multiplicacao.textContent = A * B;
@@ -107,5 +106,6 @@ sum.addEventListener("click", ev => {
     }, 1000 * 8);
   }
 });
+
 ClearFields();
 CopyList();
