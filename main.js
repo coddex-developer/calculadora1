@@ -11,8 +11,8 @@ const soma = document.getElementById("soma");
 const subtracao = document.getElementById("subtracao");
 const multiplicacao = document.getElementById("multiplicacao");
 const divisao = document.getElementById("divisao");
-let A = parseFloat(nmA.value);
-let B = parseFloat(nmB.value);
+let A = nmA.value;
+let B = nmB.value;
 
 //Funcão de mostrar Atualizacoes no modal
 versionInfo.addEventListener('click', () => {
