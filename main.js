@@ -61,10 +61,12 @@ document.getElementById("btnCopy").addEventListener("click", () => {
   navigator.clipboard.writeText(listCopy)
 });
 
-//Função de realizar operações
+//Evento para realizar operações
 sum.addEventListener("click", ev => {
   ev.preventDefault();
-
+  parseFloat(A.value());
+  parseFloat(B.value());
+  
   if (A.value === "") {
     A.style = "border: 2px solid red";
     A.focus();
