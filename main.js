@@ -88,8 +88,8 @@ sum.addEventListener("click", ev => {
   }
 
   if (!isNaN(A) && !isNaN(B)) {
-
-    soma.textContent = A + B;
+    
+    soma.textContent = (A + B).toString();
     subtracao.textContent = A - B;
     multiplicacao.textContent = A * B;
     divisao.textContent = A / B;
