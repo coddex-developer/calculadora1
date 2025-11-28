@@ -40,7 +40,7 @@ function ClearFields() {
 }
 
 //Função de copiar resultados
-function CopyList(A, B) {
+function CopyList() {
   document.getElementById("btnCopy").addEventListener("click", () => {
     const listCopy = `
 📄 *Resultado dos cálculos de ${numA} e ${numB}:* 
@@ -108,4 +108,4 @@ sum.addEventListener("click", ev => {
   }
 });
 ClearFields();
-CopyList(A, B);
+CopyList();
