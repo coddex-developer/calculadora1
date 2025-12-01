@@ -25,5 +25,8 @@ document.querySelector("form").addEventListener("input", ev => ev.preventDefault
 showSum.addEventListener("click", (ev) => {
   ev.preventDefault();
   if(inputA == "") return alert("Preencha todos os campus!");
-  if(inputA == "") return alert("Preencha todos os campus!");
+  if(inputB == "") return alert("Preencha todos os campus!");
+  if(tyoeof(inputA) !== number) return alert("Número inválido");
+  if(typeof(inputB) !== number) return alert("Número inválido!");
+  
 })
