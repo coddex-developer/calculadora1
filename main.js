@@ -1,5 +1,5 @@
-const inputA = document.getElementById("nmA").value.Number();
-const inputB = document.getElementById("nmB").value.Number();
+const inputA = document.getElementById("nmA").value;
+const inputB = document.getElementById("nmB").value;
 const showSum = document.getElementById("sum");
 const versionInfo = document.querySelector(".versionInfo");
 const modalShow = document.getElementById("modalShow");
