@@ -14,7 +14,7 @@ const divisao = document.getElementById("divisao");
 document.querySelector("form").addEventListener("input", ev => ev.preventDefault())
 
 const runOperations = (numberA, numberB) => {
-  console.log(typeof(numberA))
+  console.log(typeof(+numberA))
   soma.textContent = numberA + numberB
   subtracao.textContent = numberA - numberB
   divisao.textContent = numberA / numberB
