@@ -14,12 +14,10 @@ const divisao = document.getElementById("divisao");
 document.querySelector("form").addEventListener("input", ev => ev.preventDefault())
 
 const runOperations = (numberA, numberB) => {
-  parseFloat(numberA);
-  parseFloat(numberB);
-  soma.textContent = numberA + numberB
-  subtracao.textContent = numberA - numberB
-  divisao.textContent = numberA / numberB
-  multiplicacao.textContent = numberA * numberB
+  soma.textContent = parseFloat(numberA + numberB);
+  subtracao.textContent = parseFloat(numberA - numberB);
+  divisao.textContent = parseFloat(numberA / numberB);
+  multiplicacao.textContent = parseFloat(numberA * numberB);
 }
 
 showSum.addEventListener("click", (ev) => {
