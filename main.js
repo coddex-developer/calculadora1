@@ -15,8 +15,7 @@ document.querySelector("form").addEventListener("input", ev => ev.preventDefault
 
 const runOperations = (numberA, numberB) => {
   
-  console.log(typeof(+numberA))
-  soma.textContent = numberA + numberB
+  soma.textContent = parseFloat(numberA) + parseFloat(numberB)
   subtracao.textContent = numberA - numberB
   divisao.textContent = numberA / numberB
   multiplicacao.textContent = numberA * numberB
