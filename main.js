@@ -23,5 +23,5 @@ const runOperations = (numberA, numberB) => {
 
 showSum.addEventListener("click", (ev) => {
   ev.preventDefault();
-  runOperations(inputA.value, inputB.value)
+  runOperations(parseInt(inputA.value), parseInt(inputB.value))
 })
