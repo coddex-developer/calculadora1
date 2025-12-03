@@ -1,5 +1,5 @@
-const inputA = document.getElementById("nmA").value;
-const inputB = document.getElementById("nmB").value;
+const inputA = document.getElementById("nmA");
+const inputB = document.getElementById("nmB");
 const showSum = document.getElementById("sum");
 const versionInfo = document.querySelector(".versionInfo");
 const modalShow = document.getElementById("modalShow");
@@ -23,6 +23,5 @@ const runOperations = (numberA, numberB) => {
 
 showSum.addEventListener("click", (ev) => {
   ev.preventDefault();
-  console.log(inputA.value())
-  runOperations(inputA, inputB)
+  runOperations(inputA.value, inputB.value)
 })
