@@ -14,16 +14,13 @@ const divisao = document.getElementById("divisao");
 document.querySelector("form").addEventListener("input", ev => ev.preventDefault())
 
 const runOperations = (numberA, numberB) => {
-  const valuesOperation = [{
-    soma: numberA + numberB,
-    subtract: numberA - numberB,
-    division: numberA / numberB,
-    multiple: numberA * numberB
-  }]
+    soma.textContent = numberA + numberB
+    subtracao.textContent = numberA - numberB
+    divisao.textContent = numberA / numberB
+    multiplicacao.textContent = numberA * numberB
 }
 
 showSum.addEventListener("click", (ev) => {
   ev.preventDefault();
-
-
+  runOperations(inputA, inputB)
 })
