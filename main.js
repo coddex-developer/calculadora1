@@ -15,10 +15,10 @@ document.querySelector("form").addEventListener("input", ev => ev.preventDefault
 
 const runOperations = (numberA, numberB) => {
   
-  soma.textContent = parseFloat(numberA) + parseFloat(numberB)
-  subtracao.textContent = parseInt(numberA) - parseInt(numberB)
-  divisao.textContent = parseInt(numberA) / parseInt(numberB)
-  multiplicacao.textContent = parseInt(numberA) * parseInt(numberB)
+  soma.textContent = numberA + numberB
+  subtracao.textContent = numberA - numberB
+  divisao.textContent = numberA / numberB
+  multiplicacao.textContent = numberA * numberB
 }
 
 showSum.addEventListener("click", (ev) => {
