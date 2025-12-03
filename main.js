@@ -23,6 +23,6 @@ const runOperations = (numberA, numberB) => {
 
 showSum.addEventListener("click", (ev) => {
   ev.preventDefault();
-  console.log(inputA)
+  console.log(inputA.value)
   runOperations(inputA, inputB)
 })
